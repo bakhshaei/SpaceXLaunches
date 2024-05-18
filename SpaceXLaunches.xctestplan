@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "6F45F310-B84A-4237-834F-0B3E1B2E175C",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:SpaceXLaunches.xcodeproj",
+      "identifier" : "27E185FD2A663330007DB8B3",
+      "name" : "SpaceXLaunches"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:SpaceXLaunches.xcodeproj",
+        "identifier" : "276F70622BF8BCEF00B957C6",
+        "name" : "SpaceXLaunchesTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:SpaceXLaunches.xcodeproj",
+        "identifier" : "276F706C2BF8BCEF00B957C6",
+        "name" : "SpaceXLaunchesUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

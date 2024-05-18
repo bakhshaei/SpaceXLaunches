@@ -1,6 +1,6 @@
 //
 //  LaunchesListRowView.swift
-//  SpaceXLaunches_Snapp
+//  SpaceXLaunches
 //
 //  Created by Amin on 7/20/23.
 //

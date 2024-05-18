@@ -45,6 +45,7 @@
 		27083A292BF8BE0B0086B780 /* ImageLoaderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderManager.swift; sourceTree = "<group>"; };
 		27083A2A2BF8BE0B0086B780 /* Publisher+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Extension.swift"; sourceTree = "<group>"; };
 		27083A2B2BF8BE0B0086B780 /* WebAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAPI.swift; sourceTree = "<group>"; };
+		27083A2D2BF8BEF20086B780 /* SpaceXLaunches.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = SpaceXLaunches.xctestplan; sourceTree = "<group>"; };
 		276F70522BF8BCEE00B957C6 /* SpaceXLaunches.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceXLaunches.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		276F70552BF8BCEE00B957C6 /* SpaceXLaunchesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXLaunchesApp.swift; sourceTree = "<group>"; };
 		276F70572BF8BCEE00B957C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -132,6 +133,7 @@
 		276F70492BF8BCEE00B957C6 = {
 			isa = PBXGroup;
 			children = (
+				27083A2D2BF8BEF20086B780 /* SpaceXLaunches.xctestplan */,
 				276F70542BF8BCEE00B957C6 /* SpaceXLaunches */,
 				276F70662BF8BCEF00B957C6 /* SpaceXLaunchesTests */,
 				276F70702BF8BCEF00B957C6 /* SpaceXLaunchesUITests */,
