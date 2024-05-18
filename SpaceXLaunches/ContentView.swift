@@ -8,17 +8,33 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var favoritesService : FavoriteLaunhesService
+    @AppStorage("favoritedItems") private var storedFavorites: Data?
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            LaunchesListView(
+                viewModel: .init(
+                    launchesService:
+                        LaunchesService(
+                            webReposotiry: LaunchWebRepository(session: .shared)
+                        )
+                )
+            )
         }
-        .padding()
+        .environmentObject(favoritesService)
+        .task {
+            if let jsonData = storedFavorites {
+                favoritesService.jsonData = jsonData
+            }
+            for await _ in favoritesService.objectWillChangeSequence {
+                storedFavorites = favoritesService.jsonData
+            }
+        }
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(favoritesService: FavoriteLaunhesService())
 }
