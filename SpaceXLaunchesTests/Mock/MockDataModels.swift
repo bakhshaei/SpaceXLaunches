@@ -6,7 +6,7 @@
 //
 
 import Foundation
-@testable import SpaceXLaunches_
+@testable import SpaceXLaunches
 
 extension LaunchModel {
     static var mockData : [LaunchModel] {

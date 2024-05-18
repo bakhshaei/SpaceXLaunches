@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import SpaceXLaunches_
+@testable import SpaceXLaunches
 
 
 final class FavoriteLaunchesServiceTests: XCTestCase {

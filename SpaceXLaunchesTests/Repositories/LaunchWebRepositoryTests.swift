@@ -7,7 +7,7 @@
 
 import XCTest
 import Combine
-@testable import SpaceXLaunches_
+@testable import SpaceXLaunches
 
 final class LaunchWebRepositoryTests: XCTestCase {
     

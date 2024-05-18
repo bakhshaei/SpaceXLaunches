@@ -7,7 +7,7 @@
 
 import Foundation
 import Combine
-@testable import SpaceXLaunches_
+@testable import SpaceXLaunches
 
 extension URLSession {
     static var mockedResponsesOnly: URLSession {
