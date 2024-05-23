@@ -135,7 +135,7 @@ struct LaunchDetailView: View {
     }
 }
 
-/*
+
 struct LaunchDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
@@ -144,4 +144,4 @@ struct LaunchDetailView_Previews: PreviewProvider {
         .environmentObject(FavoriteLaunhesService())
     }
 }
-*/
+
