@@ -9,13 +9,15 @@ import SwiftUI
 
 struct LaunchesListView: View {
     
+    @EnvironmentObject var favoritesService : FavoriteLaunhesService
     @StateObject var viewModel : ViewModel
     
     var body: some View {
         List {
             launchesList
             
-            if viewModel.hasNextPage {
+            if !viewModel.isFiltered &&
+                viewModel.hasNextPage {
                 ProgressView {
                     Text("Loading launches...")
                 }
@@ -31,12 +33,26 @@ struct LaunchesListView: View {
         .listRowSeparator(.hidden)
         .listRowBackground(Rectangle().foregroundColor(.red))
         .listStyle(.sidebar)
+        
+        .toolbar {
+            ///Filter Button
+            ToolbarItem(placement: .topBarTrailing) {
+                Button(action: {
+                    viewModel.isFiltered.toggle()
+                }, label: {
+                    Label("", systemImage: viewModel.isFiltered ? "line.3.horizontal.decrease.circle.fill" : "line.3.horizontal.decrease.circle")
+                })
+            }
+        }
+    
     }
     
     @ViewBuilder private var launchesList : some View {
         switch viewModel.fetchedLaunches {
         case .success(let launches):
-            ForEach(launches) { item in
+            let listItems :Array<LaunchModel> = viewModel.isFiltered ? launches.filter({favoritesService.favoritedList.contains($0.id)}) : launches
+            
+            ForEach(listItems) { item in
                 NavigationLink {
                     LaunchDetailView(item: item)
                 } label: {
@@ -54,7 +70,7 @@ struct LaunchesListView: View {
     
 }
 
-/*
+
 struct LaunchesListView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
@@ -65,4 +81,4 @@ struct LaunchesListView_Previews: PreviewProvider {
     }
 }
 
-*/
+
